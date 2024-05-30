@@ -18,6 +18,17 @@ spring:
   cloud:
     compatibility-verifier:
       enabled: false
+  sleuth:
+    traceId128: true
+    sampler:
+      probability: 1.0
+    propagation-keys: user_name
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
 eureka:
   client:
     service-url:
