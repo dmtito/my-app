@@ -23,6 +23,8 @@ spring:
     sampler:
       probability: 1.0
     propagation-keys: user_name
+  rabbitmq:
+    addresses: localhost:5672
 logging:
   level:
     org:
