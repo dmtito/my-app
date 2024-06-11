@@ -2,9 +2,12 @@ server:
   port: 8761
 eureka:
   client:
+    service-url: eureka-server
     registerWithEureka: false
     fetchRegistry: false
 spring:
+  application:
+    name: eureka-server
   cloud:
     compatibility-verifier:
       enabled: false

@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   application:
     name: customer
@@ -15,16 +16,12 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  rabbitmq:
+    addresses: rabbitmq:5672
   cloud:
     compatibility-verifier:
       enabled: false
-  sleuth:
-    traceId128: true
-    sampler:
-      probability: 1.0
-    propagation-keys: user_name
-  rabbitmq:
-    addresses: rabbitmq:5672
+
 logging:
   level:
     org:
